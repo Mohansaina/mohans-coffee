@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohan's Coffee Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">☕ Mohan's Coffee</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#cart">Cart 🛒 <span id="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Welcome to Mohan's Coffee Shop</h1>
+    <p>The best coffee in Gudlavalleru, freshly brewed for you.</p>
+    <button onclick="scrollToMenu()">See Menu</button>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      Hi! I’m Mohan, founder of this cozy coffee shop in Gudlavalleru. 
+      We serve freshly brewed coffee with love. Come, relax, and enjoy the aroma.
+    </p>
+    <p><strong>Phone:</strong> 7093444739</p>
+    <p><strong>Email:</strong> <a href="mailto:ruttalamohan23@gmail.com">ruttalamohan23@gmail.com</a></p>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+      <div class="item" data-name="Espresso" data-price="120">
+        <img src="images/coffee1.jpg" alt="Espresso"/>
+        <h3>Espresso</h3>
+        <p>₹120</p>
+        <input type="number" min="0" value="0" class="qty"/>
+        <button onclick="addToCart(this)">Add to Cart</button>
+      </div>
+      <div class="item" data-name="Cappuccino" data-price="150">
+        <img src="images/coffee2.jpg" alt="Cappuccino"/>
+        <h3>Cappuccino</h3>
+        <p>₹150</p>
+        <input type="number" min="0" value="0" class="qty"/>
+        <button onclick="addToCart(this)">Add to Cart</button>
+      </div>
+      <div class="item" data-name="Latte" data-price="170">
+        <img src="images/coffee3.jpg" alt="Latte"/>
+        <h3>Latte</h3>
+        <p>₹170</p>
+        <input type="number" min="0" value="0" class="qty"/>
+        <button onclick="addToCart(this)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Section -->
+  <section id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <p id="total-price">Total: ₹0</p>
+    <button onclick="checkout()">Checkout</button>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Mohan's Coffee Shop. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
